@@ -1,8 +1,20 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import ForecastSummary from './forecast-summary';
 
 const ForecastSummaries = props => (
-  <div className="forecast-summaries"></div>
+  <div className="forecast-summaries">
+    {
+    props.forecasts.map(forecast => (
+      <ForecastSummary
+        date={forecast.date}
+        description={forecast.description}
+        icon={forecast.icon}
+        temperate={forecast.temperature.max}
+      />
+    ))
+  }
+  </div>
 );
 
-export default ForecastSummaries
+export default ForecastSummaries;

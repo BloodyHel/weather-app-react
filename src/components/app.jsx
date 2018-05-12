@@ -10,7 +10,7 @@ const App = props => (
       city={props.location.city}
       country={props.location.country}
     />
-    <ForecastSummaries />
+    <ForecastSummaries forecasts={props.forecasts} />
   </div>
 );
 
@@ -19,6 +19,7 @@ App.propTypes = {
     city: PropTypes.string,
     country: PropTypes.string,
   }).isRequired,
+  forecasts: PropTypes.array.isRequired,
 };
 
 export default App;
