@@ -12,4 +12,4 @@ const ForecastSummary = props => (
   </div>
 );
 
-export default ForecastSummary
+export default ForecastSummary;
