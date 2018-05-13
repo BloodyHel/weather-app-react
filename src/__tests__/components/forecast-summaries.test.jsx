@@ -1,5 +1,6 @@
 import React from 'react';
 import Enzyme from 'enzyme';
+import moment from 'react-moment';
 import ForecastSummaries from '../../components/forecast-summaries';
 import ForecastSummary from '../../components/forecast-summary';
 
@@ -24,7 +25,7 @@ const forecasts = [
 
 it('renders the correct amount of ForecastSummary components', () => {
   const wrapper = Enzyme.shallow((
-    <ForecastSummaries forecast={forecasts} />
+    <ForecastSummaries forecasts={forecasts} />
   ));
 
   expect(wrapper.find(ForecastSummary).length).toEqual(2);

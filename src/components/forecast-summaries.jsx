@@ -13,7 +13,7 @@ const ForecastSummaries = props => (
         date={forecast.date}
         description={forecast.description}
         icon={forecast.icon}
-        temperate={forecast.temperature.max}
+        temperature={forecast.temperature.max}
       />
     ))
   }
